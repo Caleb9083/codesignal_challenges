@@ -1,0 +1,70 @@
+* {
+  text-align: center;
+  color: black;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 15px;
+  flex-direction: column;
+  max-width: 700px;
+}
+body .libs-installer {
+  flex-direction: row;
+  display: flex;
+}
+body .libs-installer .libs-installer__libs-container {
+  flex-direction: column;
+  flex: 3;
+  margin: 3px;
+  padding: 10px;
+  min-height: 300px;
+  box-shadow: 2px 2px 4px 1px #bbb;
+}
+body .libs-installer .libs-installer__controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .libs-installer .libs-installer__item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 2px;
+  margin: 6px;
+  border-bottom: 3px solid transparent;
+}
+body .libs-installer .libs-installer__item:hover {
+  cursor: pointer;
+}
+body .libs-installer .libs-installer__item--selected {
+  border-bottom: 3px solid red;
+  background-color: rgba(200, 0, 0, 0.1);
+}
+body .libs-installer .libs-installer__arrow {
+  height: 40px;
+  width: 50px;
+  margin: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .libs-installer .libs-installer__icon {
+  height: 25px;
+  width: 25px;
+}
+body .libs-installer .libs-installer__icon--left {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iIAogICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIKICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAJPGcgaWQ9ImFycm93LWJhY2siPjxwYXRoIGQ9Ik0yMCwxMUg3LjhsNS42LTUuNkwxMiw0bC04LDhsOCw4bDEuNC0xLjRMNy44LDEzSDIwVjExeiIvPjwvZz4KPC9zdmc+Cgo=);
+}
+body .libs-installer .libs-installer__icon--right {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iIAogICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIKICAgICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KCTxnIGlkPSJhcnJvdy1mb3J3YXJkIj48cG9seWdvbiBwb2ludHM9IjEyLDQgMTAuNiw1LjQgMTYuMiwxMSA0LDExIDQsMTMgMTYuMiwxMyAxMC42LDE4LjYgMTIsMjAgMjAsMTIgIi8+PC9nPgo8L3N2Zz4KCg==);
+}
+body .controls-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */
