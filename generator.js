@@ -49,21 +49,29 @@ class Generator {
     this.pool = {};
   }
   create(name) {
-    if (!Object.keys(this.pool).includes(name)) {
+    if (
+      !Object.keys(this.pool).includes(name) ||
+      this.pool[`${name}`].length === 0
+    ) {
       this.pool[`${name}`] = [1];
+      console.log(this.pool);
       return `${name}${1}`;
     }
+
     this.pool[`${name}`] = this.pool[`${name}`].sort((a, b) => a - b);
 
     for (let i = 0; i < Math.max(this.pool[`${name}`]); i++) {
       if (i + 1 != this.pool[`${name}`][i]) {
         let theName = `${name}${i + 1}`;
         this.pool[`${name}`].push(i + 1);
+        console.log(this.pool);
+
         return theName;
       }
     }
     let newMax = Math.max(...this.pool[`${name}`]) + 1;
     this.pool[`${name}`].push(newMax);
+    console.log(this.pool);
 
     return `${name}${newMax}`;
   }
@@ -106,8 +114,8 @@ const queries = [
 //  "alex1",
 //  "john1"]
 
-console.log("Test 1");
-console.log(solution(queries));
+// console.log("Test 1");
+// console.log(solution(queries));
 
 const queries2 = [
   "create alex",
@@ -123,5 +131,22 @@ const queries2 = [
 ];
 // Output
 // ["alex1", "alex2", "alex1", "john1", "john2", "ama1", "john1", "john3"]
-console.log("Test 2");
-console.log(solution(queries2));
+// console.log("Test 2");
+// console.log(solution(queries2));
+
+const queries3 = [
+  "create a",
+  "create a",
+  "create ab",
+  "create abc",
+  "delete abc1",
+  "create abcd",
+  "delete abcd1",
+  "delete a1",
+  "delete ab1",
+  "create abc",
+];
+// console.log("Test 3");
+// console.log(solution(queries3));
+// a = 4;
+// console.log([].filter((el) => el != 4));
